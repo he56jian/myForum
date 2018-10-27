@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>文章发表页</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="../public/layui/css/layui.css">
+  <style>
+  		
+		.add-article{
+			max-width:1200px;
+			height:450px;
+			margin:10px auto;
+			background-color:#ffffff;
+		}
+		.add-article .add-art-main{
+			padding:20px;
+		}
+		.add-article .add-art-head{
+			padding-bottom:10px;
+			border-bottom:1px solid rgb(233,233,233);
+			position:relative;
+			color:rgb(0,150,134);
+		}
+		.add-article .add-art-head span{
+			position:relative;
+			margin-bottom:20px;
+			padding:0 20px 10px;	
+		}		
+		.add-article .add-art-head span::after{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			border-bottom:2px solid rgb(0,150,134); 
+			content:'';
+		}
+		.add-con-mass .con-mass-head{
+			padding-top:20px;
+			font-size:0;
+		}
+		.add-con-mass .con-mass-type{
+			position:relative;
+			min-width:203px;
+			width:20%;
+		}
+		.add-con-mass .con-mass-head section{
+			float:left;
+		}
+		.add-con-mass .con-mass-type .mass-type-title,
+		.add-con-mass .con-mass-title .mass-art-title{
+			display:inline-block;
+			padding:10px 20px;
+			background-color:#ffffff;
+			border:1px solid rgb(233,233,233);
+			font-size:14px;
+			border-radius:5px;
+		}
+		.add-con-mass .con-mass-type .mass-type-val{	
+			position:relative;
+			display:inline-block;
+			padding:10px 40px 10px 20px;
+			border:1px solid rgb(233,233,233);
+			font-size:14px;
+			color:#000000;
+			outline:none;
+			border-radius:5px;
+		}
+		.add-con-mass .con-mass-type .mass-type-val::after{
+			position:absolute;
+			top:50%;
+			right:20px;
+			margin-top:-3px;
+			border:6px solid transparent;
+			border-top:6px solid #c2c2c2;
+			content:'';
+		}
+		.art-type-val{
+			display:none
+		}
+		.con-mass-type .mass-type-options{
+			position:absolute;
+			right:0;
+			width:100%;
+			margin-top:15px;
+			border:1px solid rgb(233,233,233);
+			border-radius:5px;
+		}
+		.con-mass-type .mass-type-options li{
+			padding:5px 0 5px 20px;
+		}
+		.con-mass-head .con-mass-title{
+			position:relative;
+			float:right;
+			width:80%;
+		}
+		.add-con-mass .con-mass-title .mass-art-title{
+			position:absolute;
+			top:0px;
+			left:0;
+			padding:10px 30px 9px;
+		}
+		
+		.con-mass-head .con-mass-title input{ 
+			box-sizing:border-box;
+			width:100%;
+			height:40px;
+			padding-left:100px;
+			font-size:14px;
+			outline:none;
+			border:1px solid rgb(233,233,233);
+			border-radius:5px;	
+		}
+		.unative{
+			display:none;
+		}
+		.add-art-content .mass-main-util{
+			position:relative;
+			margin-top:20px;
+			border:1px solid rgb(233,233,233);
+			border-radius:5px;				
+		}
+		.add-art-content .mass-main-util li{
+			float:left;
+			padding:10px;
+			padding-left:20px;
+			font-size:16px;
+			color:rgba(0,0,0,.5);
+			font-weight:700;
+			cursor:pointer;
+		}
+		.add-art-content .mass-main-util li:hover{
+			color:rgb(0,0,0);
+		}
+		.add-art-content .mass-main-util li.font-ita{
+			font-style:italic;
+		}
+		.add-art-content .mass-main-util li.text-underline{
+			text-decoration:underline;
+		}
+		.add-art-content .mass-main-util li.text-through{
+			text-decoration:line-through;
+		}
+		.add-art-content .mass-main-util div{
+			float:left;
+		}
+		.add-art-content .mass-main-util .util-ari{
+			position:relative;
+		}
+		.add-art-content .mass-main-util i{
+			position:relative;
+			padding:10px;
+			padding-left:40px;
+			font-size:16px;
+			color:rgba(0,0,0,.5);
+			font-weight:700;
+			cursor:pointer;
+			line-height:40px;
+		}
+		.add-art-content .mass-main-util .util-oth::before,
+		.add-art-content .mass-main-util .util-ari::before{
+			position:absolute;
+			top:0;
+			left:10px;
+			width:1px;
+			height:100%;
+			border-left:1px solid rgb(233,233,233);
+			content:'';
+		}
+		.add-art-content .mass-main-util .util-oth{
+			position:relative;s
+		}
+		.add-art-content .mass-main-textarea {
+			width:100%;
+		}
+		.add-art-content .mass-main-textarea .textarea-val{
+			box-sizing:border-box;
+			width:100%;
+			height:200px;
+			outline:none;
+			border:1px solid rgb(233,233,233);
+			border-radius:5px;
+			padding:20px;
+		}
+		.add-art-sub{
+			margin-top:15px;
+			padding:10px 20px;
+			background-color:rgb(0,150,134);
+			color:rgb(255,255,255);
+			border:1px solid rgb(0,150,134);
+			border-radius:5px ;
+			outline:none;
+		}
+  </style>
+ </head>
+ <body>
+	<article class='add-article'>
+		<section class='add-art-main'>
+			<header class='add-art-head'>
+				<span>文章编辑</span>
+			</header>
+			<section class='add-art-content'>
+				<form action=''class='add-con-mass'>
+					<section class='con-mass-head fix'>
+						<section class='con-mass-type'>
+							<div class='mass-type-title'>
+								文章类型
+							</div>
+							<input type='text' disabled class='art-type-val'/>
+							<div class='mass-type-val'>
+							请选择
+							<ul class='mass-type-options unative'>
+								<li>请选择</li>
+								<li>nodejs</li>
+								<li>vue</li>
+								<li>react</li>
+								<li>angular</li>
+							</ul>
+							</div>
+						</section>
+						<div class='con-mass-title fix'>
+							<div class='mass-title'>
+								<div class='mass-art-title'>
+									标题
+								</div>
+								<input type='text'class='art-title-val'/>
+							</div>
+						
+						</div>
+					</section>
+					<section class='mass-main-util fix'>
+						<div class='util-font'>
+							<ul >
+								<li class='font-wei' title='加粗'>B</li>
+								<li class='font-ita' title='倾斜'>I</li>
+								<li class='text-underline' title='下划线'>U</li>
+								<li class='text-through' title='删除线'>D</li>
+							</ul>
+						</div>
+						<div class='util-ari'>
+							<i class="layui-icon layedit-tool-left" title="左对齐"></i>
+							<i class="layui-icon layedit-tool-center" title="居中对齐"></i>
+							<i class="layui-icon layedit-tool-right" title="右对齐"></i>
+						</div>
+						<div class='util-oth'>
+							<i class="layui-icon layedit-tool-link" title="插入链接" ></i>
+							<i class="layui-icon layedit-tool-unlink layui-disabled" title="清除链接" ></i>
+							<i class="layui-icon layedit-tool-face" title="表情"></i>
+						</div>
+					
+					</section>
+					<section class='mass-main-textarea'>
+						<textarea class='textarea-val' required></textarea> 
+					</section>
+					<input type='submit' class='add-art-sub' value='立即发布'/>
+				</form>
+			
+			</section>
+		</section>
+	</article>
+ </body>
+</html>

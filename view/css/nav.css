@@ -1,0 +1,80 @@
+
+.blog-header {
+    background-color: #393D49;
+    height: 60px;
+}
+
+.header-container {
+    position:relative;
+    max-width: 1200px;
+    width:80%;
+    height:60px;
+    margin: 0 auto;
+}
+.header-container li {
+    box-sizing: border-box;
+    position:relative;
+    float: left;
+    height:60px;
+}
+.head-nav .head-nav-icon{
+    font-size: 19px;
+    line-height: 60px;
+}
+.header-container li:hover a{
+    color:rgb(255,255,255);
+}
+.header-container li:hover{
+    border-bottom: 5px solid rgb(95,184,120);
+}
+.header-container li a {
+    padding: 0 20px;
+    font-size: 19px;
+    color: rgba(255, 255, 255, .7);
+    font-weight: 500;
+    line-height: 60px;
+}
+.head-login-status{
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    height:60px;
+    background-color: #393D49;
+    z-index: 1;
+}
+.head-login-status.unative{
+    display:none;
+}
+.head-login-status.ative{
+    display:block;
+}
+.head-login-status .login-mass .login-mass-main{
+    padding-right:12px;
+    cursor:pointer;
+}
+.head-login-status .login-mass .login-mass-main:hover{
+    color:rgb(255,255,255);
+}
+.head-login-status .login-mass img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.head-login-status .login-mass .head-user{
+    padding:0 2px;
+    font-size: 19px;
+    color: rgba(255,255,255,.7);
+    vertical-align: middle;
+    line-height: 60px;
+}
+.head-login-status .login-mass .login-other{
+    position: absolute;
+    right: 0;
+    top:27px;
+    border:6px solid transparent;
+    border-top-color:#ffffff;
+}
+

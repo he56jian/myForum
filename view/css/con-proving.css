@@ -1,0 +1,103 @@
+
+.con-proving {
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+    min-width: 750px;
+    max-width:1200px;
+    font-size: 14px;
+}
+
+.pro-option {
+    height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.pro-option section {
+    position: relative;
+    float: left;
+    padding: 10px;
+    z-index: 1;
+}
+
+.pro-option section a {
+    color: #333333;
+}
+
+.pro-option section a:hover {
+    color: rgba(53, 53, 53, .5);
+}
+
+.pro-option section.ative {
+    position: relative;
+    border: 1px solid #e6e6e6;
+}
+
+.pro-option .ative::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 39px;
+    border-bottom: 2px solid #ffffff;
+    content: '';
+    pointer-events: none;
+}
+
+.pro-mass.unative{
+    display:none;
+}
+.pro-mass.ative{
+    display: block;
+}
+.con-proving .pro-mass {
+    padding: 0 20px;
+}
+
+.con-proving .pro-mass .pro-pass {
+    text-indent: 1em;
+}
+
+.con-proving .pro-mass p {
+    padding: 10px 0;
+    line-height: 30px;
+}
+
+.con-proving .pro-mass p input {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.con-proving .pro-mass span {
+    padding: 0 20px;
+}
+.pro-mass input[type='submit'], input[type='reset'] {
+    height: 38px;
+    margin: 10px;
+    padding: 0 18px;
+    border: none;
+    line-height: 38px;
+    outline: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.pro-mass .pro-sub {
+    background-color: #01AAED;
+    color: #ffffff;
+}
+
+.pro-mass .pro-res {
+    background-color: #ffffff;
+    border: 1px solid #a6a6a6;
+}
+
+.pro-mass .reg-user{
+    text-indent:1em;
+}
+.pro-mass .reg-pass{
+    text-indent: 2em    ;
+}
+

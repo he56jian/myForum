@@ -1,0 +1,108 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="../public/layui/css/layui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/article.css">
+
+</head>
+<body>
+<nav class="blog-tag">
+    <div class="tag-container fix">
+        <ul class="tag-options">
+            <li><a href="">HTML</a></li>
+            <li><a href="">HTML</a></li>
+            <li><a href="">HTML</a></li>
+            <li><a href="">HTML</a></li>
+            <li><a href="">HTML</a></li>
+        </ul>
+        <div class="tag-public"><a href="">发表文章</a></div>
+    </div>
+</nav>
+<article class="blog-content">
+    <section class="fix">
+        <section class="con-article">
+            <ul class="con-art-items">
+                <li class="con-art-item fix">
+                    <section class="item-icon">
+                        <img src="../public/img/1.jpg" alt="icon" width="40px" height="40px">
+                        <p class="item-user">发表用户</p>
+                    </section>
+                    <section class="item-option">
+                        <p><span class="item-type">分类</span><span class="item-title">标题1</span></p>
+                        <p class="item-time">2018-10-20 16:40</p>
+                    </section>
+                    <section class="item-comment">
+                        <i class="layui-icon layui-icon-file-b ver-mid"></i>
+                        <span class="ver-mid">0</span>
+                    </section>
+                </li> <li class="con-art-item fix">
+                <section class="item-icon">
+                    <img src="../public/img/1.jpg" alt="icon" width="40px" height="40px">
+                    <p class="item-user">发表用户</p>
+                </section>
+                <section class="item-option">
+                    <p><span class="item-type">分类</span><span class="item-title">标题1</span></p>
+                    <p class="item-time">2018-10-20 16:40</p>
+                </section>
+                <section class="item-comment">
+                    <i class="layui-icon layui-icon-file-b ver-mid"></i>
+                    <span class="ver-mid">0</span>
+                </section>
+            </li> <li class="con-art-item fix">
+                <section class="item-icon">
+                    <img src="../public/img/1.jpg" alt="icon" width="40px" height="40px">
+                    <p class="item-user">发表用户</p>
+                </section>
+                <section class="item-option">
+                    <p><span class="item-type">分类</span><span class="item-title">标题1</span></p>
+                    <p class="item-time">2018-10-20 16:40</p>
+                </section>
+                <section class="item-comment">
+                    <i class="layui-icon layui-icon-file-b ver-mid"></i>
+                    <span class="ver-mid">0</span>
+                </section>
+            </li>
+            </ul>
+            <footer>
+                <div class="con-paging">
+                    <ul class="pag-num">
+                        <li class="pag-back pag-unalive">上一页</li>
+                        <li class="pag-alive">1</li>
+                        <li>2</li>
+                        <li class="pag-next">下一页</li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+        <aside class="con-aside">
+            <header class="asi-title">
+                <h3>介绍</h3>
+            </header>
+            <article class="asi-con">
+                <p>学习后写的论坛</p>
+                <p>写得不好，请多多指教</p>
+            </article>
+        </aside>
+    </section>
+</article>
+
+</body>
+<script src="js/con-article.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    ajax({
+		type: 'get',
+		url: 'http://127.0.0.1:3000',
+		success: function (result){
+			console.log(result);
+        },
+        error:function () {
+            console.log('失败');
+		}
+
+	})
+
+</script>
+</html>

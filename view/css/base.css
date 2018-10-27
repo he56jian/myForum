@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+body{
+    background-color: rgb(242,242,242);
+    font-size: 14px;
+}
+.fix:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.ver-mid {
+    vertical-align: middle;
+}

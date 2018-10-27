@@ -1,0 +1,115 @@
+.blog-content {
+    position: relative;
+    width: 85%;
+    min-height:200px;
+    max-width:1200px;
+    margin: 10px auto;
+}
+
+.con-article {
+    float: left;
+    width: 75%;
+    height:100%;
+    font-size: 12px;
+}
+.con-article .con-art-items{
+    position:relative;
+}
+.con-article .con-art-item{
+    position:relative;
+    border:1px solid #ffffff;
+}
+.con-article .con-art-item section {
+    float: left;
+    padding: 10px 20px 15px 5px;
+}
+
+.con-article .con-art-item .item-user {
+    position:absolute;
+    bottom:0;
+    padding-left: 5px;
+}
+
+.con-article .con-art-item .item-title {
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: middle;
+    line-height: 30px;
+    cursor:pointer;
+}
+
+.con-article .con-art-item .item-type {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: rgb(255, 37, 84);
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.con-article .con-art-item .item-comment {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 1em;
+    margin: auto;
+    padding-right: 0;
+}
+
+.con-article footer {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+}
+
+.con-article .con-paging {
+    height: 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.con-article .con-paging .pag-num {
+    display: inline-block;
+    margin:0 auto;
+    color:#333;
+}
+.con-article .con-paging .pag-num li{
+    float:left;
+    padding:0 15px;
+    line-height: 28px;
+    cursor:pointer;
+    vertical-align: middle;
+    border:1px solid #e2e2e2;
+}
+.con-article .con-paging .pag-num .pag-alive{
+    color:#e2e2e2;
+    background-color: orangered;
+    cursor:auto;
+}
+.con-article .con-paging .pag-num .pag-unalive{
+    cursor:no-drop;
+    color:rgba(0,0,0,.2)
+}
+.con-article .con-paging .pag-num li:hover{
+    color:rgba(0,0,0,.5)
+}
+.con-aside {
+    float: right;
+    right: 0;
+    width: 20%;
+    padding:10px;
+    background-color: #ffffff;
+}
+.con-aside .asi-title{
+    font-size: 16px;
+    font-weight: 700;
+    text-align:left;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(242,242,242);
+}
+.con-aside .asi-con{
+    padding:10px 0;
+}
