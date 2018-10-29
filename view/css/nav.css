@@ -44,19 +44,10 @@
     background-color: #393D49;
     z-index: 1;
 }
-<<<<<<< HEAD
-.head-login-status a{
-=======
 head-login-status li{
->>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     cursor:pointer;
 }
-.head-login-status.unative{
-    display:none;
-}
-.head-login-status.ative{
-    display:block;
-}
+
 .head-login-status .login-mass .login-mass-main{
     padding-right:12px;
     cursor:pointer;

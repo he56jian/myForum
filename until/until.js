@@ -55,11 +55,12 @@ myUntils.setCrypro = function (data) {
 /**
  * 判断输入值是否存在
  */
-myUntils.comparison = function (reqData) {
+myUntils.comparison = function (reqData,callback) {
     _docData = ['users'];
     _docLen = _docData.length;
-    _checkData.bind(reqData);
-    connectMongo(_checkData)
+    connectMongo(function () {
+		_checkData.call(null,reqData)
+	})
 }
 
 /**
@@ -68,15 +69,21 @@ myUntils.comparison = function (reqData) {
  */
 function _checkData(_reqData) {
     let _name = _reqData.name,
-        _val = _reqData.val;
+        _val = _reqData.val,
+        _staU = false,      //用于判断user是否存在
+        _staP = false,      //用于判断_stap是否正确；
+        state = false;
     finishPack();
     let newData = JSON.parse(_mongoData);
     _ergloop(newData, function (data) {
         let _newData = newData[data];
         _ergloop(_newData,function (_data,index) {
-            let checkData = _newData[_data]
+            let checkData = _newData[_data];
+            console.log(checkData[_name],_val)
             if(checkData[_name] === _val){
-                console.log('存在')
+
+            }else {
+
             }
         })
     })
@@ -177,7 +184,7 @@ function finishPack() {
  * @private
  */
 function _choiceData(choice, data) {
-    let _data = JSON.parse(data)
+    let _data = JSON.parse(data);
     // console.log(typeof _data);
     let resData = {};
     let userData = _data.users;

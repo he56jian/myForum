@@ -4,7 +4,7 @@ const url = require('url')
 const http = require('http')
 const untils = require('./until/until')
 const querystring = require('querystring')      //用于解析post请求的数据；
-
+let _status = true;     //用于阻隔连续点击两次的情况
 http.createServer((req, res) => {
     let _pathname = __dirname;		//获取当前目录
     if (req.method === 'GET') {
@@ -57,32 +57,40 @@ http.createServer((req, res) => {
         }
     } else if (req.method === 'POST') {
         if (req.url =='/') {
-            let _data = '';
-            req.on('data',function (data) {         //每收到一次post发送过来的数据处理一次；
-                // console.log(querystring.parse(data));
-                _data +=data;
-            })
-            req.on('end',function () {
-                _data = querystring.parse(_data);
-            untils.getMongoData(_data,responseData);
-            })
+			_reqOnData(function (_data) {
+				untils.getMongoData(_data,responseData);
+			})
+        }else if(req.url === '/view/register.html'){
+            if(_status){
+                _status = false;
+				_reqOnData(function (_reqData) {
+					let _name = _reqData.name,
+						_val = _reqData.val;
+					if(_name === 'username'){
+					    if(/^(_|[a-zA-Z\u4e00-\u9fa5])/.test(_val)){
+							responseData('可以注册')
+                        }else{
+							responseData('格式不正确')
+                        }
+                    }
+                    _status = true;
+				})
+            }
         }else if(req.url === '/view/login.html'){
-            let _reqData = '';
-            req.on('data',function (data) {
-                _reqData +=data;
-            })
-            req.on('end',function () {
-                _reqData = querystring.parse(_reqData);
-                let _name = _reqData.name,
-                    _val = _reqData.val;
-                console.log('发送了数据')
-                if(_name === 'password'){
-                    _reqData._val =  untils.setCrypro(_val)
-                }
-                untils.comparison(_reqData);
-            })
+
         }
     }
+
+    function _reqOnData(callback) {
+		let _data = '';
+		req.on('data',function (data) {         //每收到一次post发送过来的数据处理一次；
+			_data +=data;
+		})
+		req.on('end',function () {
+			_data = querystring.parse(_data);
+            callback && callback.call(null,_data);
+		})
+	}
 
     function responseData(data) {       //返回数据
         res.write(data);

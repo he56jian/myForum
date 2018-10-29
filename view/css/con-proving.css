@@ -73,6 +73,10 @@
 .con-proving .pro-mass span {
     padding: 0 20px;
 }
+.con-proving .pro-mass .tips{
+    padding-left: 5px;
+    color: rgba(1,1,1,.2);
+}
 .pro-mass input[type='submit'], input[type='reset'] {
     height: 38px;
     margin: 10px;
