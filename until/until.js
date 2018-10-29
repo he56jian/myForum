@@ -1,111 +1,172 @@
 const myUntils = {}
 const events = require('events').EventEmitter;
 const eventsEmitter = new events;
+const event = eventsEmitter;
+let _docData = ["articals", "users", "comments"],
+    _docLen = _docData.length;
+let _mongoData = '';
 
 /**
  * 对数据的获取；
  * 还有些问题；当前获取的是已经知道的数据，如果是不知道库名的数据该怎么办？如果不知道数据的条目怎么办？
  * 有待完善；查找下对数据库的全部文档名的获取；对数据库文档条目的获取；
  */
-const event = eventsEmitter;
+/**
+ * 根据选择获取内容
+ * @param choice 需要获取的内容，格式为{
+        articals:["tips","title","commentNum","auther","created"],
+    }
+ * @param callback 回调函数；
+ */
 myUntils.getMongoData = function (choice, callback) {
-    const MongoClient = require('mongodb').MongoClient;
-    var mongoUrl = 'mongodb://localhost:27017/';
-    let _mongoData = '';
     let _finishNum = 0,
-        _artData,
-        _userData,
-        _commentData,
-        _allData = [],
-        _docData = ["articals", "users", "comments"],
-        _docLen = _docData.length;
-    MongoClient.connect(mongoUrl, function (err, db) {				//连接数据库
-            if (err) console.log(err);
-            var dbo = db.db('user');									//创建可操作的user对象；
-            // dbo.collection(_docData[0], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
-            //     let artKeyArr = Object.keys(data[0]);
-            //     let _len = artKeyArr.length;
-            //     for (let i = 0; i < _len; i++) {
-            //         _artData[i] = '\"' + artKeyArr[i] + '\":\"' + data[0][artKeyArr[i]] + '\"';
-            //     }
-            //     _artData = _artData.join(',');
-            //     _artData = ',\"article\":{' + _artData + '}';
-            //     _mongoData += _artData;
-            //     eventsEmitter.emit('finishOne')
-            // })
-            // dbo.collection(_docData[1], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
-            //    let conData = [];                                               //创建一个用于存放数据的数组
-            //    	let _mongodata = [];
-            //    	for (let k = 0, kLen = data.length; k < kLen; k++) {
-            //    		let _rKeyArr = Object.keys(data[k]);              //获取每个文档中的key的集合；是一个数组集合
-            //    		let _len = _rKeyArr.length;
-            //    		for (let i = 0; i < _len; i++) {                    //遍历每个文档集合；把集合转成字符串
-            //    			conData[i] = '\"' + _rKeyArr[i] + '\":\"' + data[k][_rKeyArr[i]] + '\"';
-            //    		}
-            //    		_mongodata[k] = conData.join(',');
-            //    		_mongodata[k] = '\"' + mongoName + k + '\":{' + _mongodata[k] + '}';
-            //    	}
-            //    	_mongodata = _mongodata.join(',');
-            //    	_userData = ',\"' + mongoName + '\":{' + _mongodata + '}';
-            //     _mongoData += _userData;
-            //     eventsEmitter.emit('finishOne')
-            // })
-            //
-            // dbo.collection(_docData[2], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
-            //     for (let k = 0, kLen = data.length; k < kLen; k++) {
-            //         let commentKeyArr = Object.keys(data[k]);
-            //         let _len = commentKeyArr.length;
-            //         for (let i = 0; i < _len; i++) {
-            //             _commentData[i] = '\"' + commentKeyArr[i] + '\":\"' + data[k][commentKeyArr[i]] + '\"';
-            //         }
-            //     }
-            //     _commentData = _commentData.join(',');
-            //     _commentData = ','+_docData[2]+':{' + _commentData + '}';
-            //     _mongoData += _commentData;
-            //     eventsEmitter.emit('finishOne')
-            // })
-
-            for (let _doc = 0; _doc < _docLen; _doc++) {
-                dbo.collection(_docData[_doc], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
-                    getData(data, _docData[_doc]);          //data是一个数组对象，其内部存放的格式是，一个文档为一个数组位；
-                    eventsEmitter.emit('finishOne')
-                })
-            }
-
-            function getData(data, mongoName) {                                             //如果data 是一个json对象，
-                let conData = [];                                               //创建一个用于存放数据的数组
-                let _mongodata = [];
-                for (let k = 0, kLen = data.length; k < kLen; k++) {
-                    let _rKeyArr = Object.keys(data[k]);              //获取每个文档中的key的集合；是一个数组集合
-                    let _len = _rKeyArr.length;
-                    for (let i = 0; i < _len; i++) {                    //遍历每个文档集合；把集合转成字符串
-                        conData[i] = '\"' + _rKeyArr[i] + '\":\"' + data[k][_rKeyArr[i]] + '\"';
-                    }
-                    _mongodata[k] = conData.join(',');
-                    _mongodata[k] = '\"' + mongoName + k + '\":{' + _mongodata[k] + '}';
-                }
-                _mongodata = _mongodata.join(',');
-                _mongodata = ',\"' + mongoName + '\":{' + _mongodata + '}';
-                _mongoData += _mongodata;
-            }
-
-            //把数据库的内容传递回去；；
-            eventsEmitter.on('finishOne', function () {
-                _finishNum++;
-                if (_finishNum >= _docLen) {
-                    eventsEmitter.emit('finishAll');
-                }
-            })
-            eventsEmitter.on('finishAll', function () {
-                _mongoData = _mongoData.substr(1)
-                _mongoData = '{' + _mongoData + '}';
-                _finishNum = 0;
-                eventsEmitter.removeAllListeners();
-                _mongoData = _choiceData(choice, _mongoData);
-                callback.call(null, _mongoData);
-            });
+        _allData = [];
+    connectMongo(function () {
+        eventsEmitter.emit('finishOne')
+    });
+    //把数据库的内容传递回去；；
+    eventsEmitter.on('finishOne', function () {
+        _finishNum++;
+        if (_finishNum >= _docLen) {
+            eventsEmitter.emit('finishAll');
+        }
+    })
+    eventsEmitter.on('finishAll', function () {
+            finishPack();
+            _finishNum = 0;
+            eventsEmitter.removeAllListeners();
+            _mongoData = _choiceData(choice, _mongoData);
+            callback.call(null, _mongoData);
         }
     )
+}
+
+/**
+ * 对值进行加密
+ */
+myUntils.setCrypro = function (data) {
+    const crypro = require('crypto');
+    const KEY = 'hejiancheng hen li hai'
+    const hmac = crypro.createHmac('sha256', KEY);       //设置加密方式，及key值；
+    hmac.update(data);      //对值进行加密
+    const cryData = hmac.digest('hex')   //返回加密后的16进制；
+    return cryData;
+}
+/**
+ * 判断输入值是否存在
+ */
+myUntils.comparison = function (reqData) {
+    _docData = ['users'];
+    _docLen = _docData.length;
+    _checkData.bind(reqData);
+    connectMongo(_checkData)
+}
+
+/**
+ * 判断数据是否存在
+ * @private
+ */
+function _checkData(_reqData) {
+    let _name = _reqData.name,
+        _val = _reqData.val;
+    finishPack();
+    let newData = JSON.parse(_mongoData);
+    _ergloop(newData, function (data) {
+        let _newData = newData[data];
+        _ergloop(_newData,function (_data,index) {
+            let checkData = _newData[_data]
+            if(checkData[_name] === _val){
+                console.log('存在')
+            }
+        })
+    })
+}
+
+
+/**
+ * 链接数据库；
+ */
+function connectMongo(callback) {
+    const MongoClient = require('mongodb').MongoClient;
+    var mongoUrl = 'mongodb://localhost:27017/';
+    MongoClient.connect(mongoUrl, function (err, db) {				//连接数据库
+        if (err) console.log(err);
+        var dbo = db.db('user');									//创建可操作的user对象；
+        // dbo.collection(_docData[0], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
+        //     let artKeyArr = Object.keys(data[0]);
+        //     let _len = artKeyArr.length;
+        //     for (let i = 0; i < _len; i++) {
+        //         _artData[i] = '\"' + artKeyArr[i] + '\":\"' + data[0][artKeyArr[i]] + '\"';
+        //     }
+        //     _artData = _artData.join(',');
+        //     _artData = ',\"article\":{' + _artData + '}';
+        //     _mongoData += _artData;
+        //     eventsEmitter.emit('finishOne')
+        // })
+        // dbo.collection(_docData[1], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
+        //    let conData = [];                                               //创建一个用于存放数据的数组
+        //    	let _mongodata = [];
+        //    	for (let k = 0, kLen = data.length; k < kLen; k++) {
+        //    		let _rKeyArr = Object.keys(data[k]);              //获取每个文档中的key的集合；是一个数组集合
+        //    		let _len = _rKeyArr.length;
+        //    		for (let i = 0; i < _len; i++) {                    //遍历每个文档集合；把集合转成字符串
+        //    			conData[i] = '\"' + _rKeyArr[i] + '\":\"' + data[k][_rKeyArr[i]] + '\"';
+        //    		}
+        //    		_mongodata[k] = conData.join(',');
+        //    		_mongodata[k] = '\"' + mongoName + k + '\":{' + _mongodata[k] + '}';
+        //    	}
+        //    	_mongodata = _mongodata.join(',');
+        //    	_userData = ',\"' + mongoName + '\":{' + _mongodata + '}';
+        //     _mongoData += _userData;
+        //     eventsEmitter.emit('finishOne')
+        // })
+        //
+        // dbo.collection(_docData[2], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
+        //     for (let k = 0, kLen = data.length; k < kLen; k++) {
+        //         let commentKeyArr = Object.keys(data[k]);
+        //         let _len = commentKeyArr.length;
+        //         for (let i = 0; i < _len; i++) {
+        //             _commentData[i] = '\"' + commentKeyArr[i] + '\":\"' + data[k][commentKeyArr[i]] + '\"';
+        //         }
+        //     }
+        //     _commentData = _commentData.join(',');
+        //     _commentData = ','+_docData[2]+':{' + _commentData + '}';
+        //     _mongoData += _commentData;
+        //     eventsEmitter.emit('finishOne')
+        // })
+        for (let _doc = 0; _doc < _docLen; _doc++) {
+            dbo.collection(_docData[_doc], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
+                getData(data, _docData[_doc]);          //data是一个数组对象，其内部存放的格式是，一个文档为一个数组位；
+                callback && callback();
+            })
+        }
+
+        function getData(data, mongoName) {                                             //如果data 是一个json对象，
+            let conData = [];                                               //创建一个用于存放数据的数组
+            let _mongodata = [];
+            for (let k = 0, kLen = data.length; k < kLen; k++) {
+                let _rKeyArr = Object.keys(data[k]);              //获取每个文档中的key的集合；是一个数组集合
+                let _len = _rKeyArr.length;
+                for (let i = 0; i < _len; i++) {                    //遍历每个文档集合；把集合转成字符串
+                    conData[i] = '\"' + _rKeyArr[i] + '\":\"' + data[k][_rKeyArr[i]] + '\"';
+                }
+                _mongodata[k] = conData.join(',');
+                _mongodata[k] = '\"' + mongoName + k + '\":{' + _mongodata[k] + '}';
+            }
+            _mongodata = _mongodata.join(',');
+            _mongodata = ',\"' + mongoName + '\":{' + _mongodata + '}';
+            _mongoData += _mongodata;
+        }
+    });
+
+}
+
+/**
+ * 处理获取的最后的数据
+ */
+function finishPack() {
+    _mongoData = _mongoData.substr(1)
+    _mongoData = '{' + _mongoData + '}';
 }
 
 /**
@@ -183,7 +244,6 @@ function _getData(dataValue, regChoice, userData) {
     return resdata;
 }
 
-
 /**
  * 循环遍历
  * @param ergdata 如果是
@@ -215,7 +275,7 @@ function _ergloop(ergdata, callback) {
 
 
 Date.prototype.dateForm = function (date) {
-    let _dateObj = [date.getFullYear(),'年',date.getMonth() + 1,
+    let _dateObj = [date.getFullYear(), '年', date.getMonth() + 1,
         '月', date.getDate(), '日']
     return _dateObj.join('');
 }

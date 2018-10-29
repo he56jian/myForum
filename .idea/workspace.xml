@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d316487-6051-4a67-be3b-9e7bdbbda733" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/出现的问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/出现的问题.md" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/view/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/collection-0-4438955534255968611.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/collection-0-4438955534255968611.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/index-1-4438955534255968611.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/index-1-4438955534255968611.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000042" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/newapp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/until/until.js" beforeDir="false" afterPath="$PROJECT_DIR$/until/until.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/con-proving.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +38,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="450">
               <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+=======
+            <state relative-caret-position="76">
+              <caret line="111" column="42" lean-forward="true" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
               <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#body#0;n#html#0;n#!!top" />
                 <element signature="n#ul#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#article#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#ul#0;n#section#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#section#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -30,15 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/css/article.css">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/register.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1458">
               <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+=======
+            <state relative-caret-position="156">
+              <caret line="36" column="109" selection-start-line="36" selection-start-column="109" selection-end-line="36" selection-end-column="109" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="nav.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/css/nav.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,6 +86,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="864">
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+=======
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="5" selection-start-line="9" selection-start-column="10" selection-end-line="11" selection-end-column="5" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
               <folding>
                 <element signature="n#!!doc;n#createArtEle#0" />
               </folding>
@@ -60,26 +100,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newapp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newapp.js">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="213">
+              <caret line="37" column="129" selection-start-line="37" selection-start-column="129" selection-end-line="37" selection-end-column="129" />
               <folding>
-                <element signature="e#955#2034#0" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="until.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/js/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newapp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newapp.js">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="504">
+              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+              <folding>
+                <element signature="e#955#2034#0" />
+=======
+            <state relative-caret-position="61">
+              <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+              <folding>
+                <element signature="e#321#2225#0" />
+                <element signature="e#2350#2724#0" />
+                <element signature="e#2359#2493#0" />
+                <element signature="e#2369#2392#0" />
+                <element signature="e#2532#2650#0" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="until.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/until/until.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="3150">
               <caret line="180" column="10" selection-start-line="180" selection-start-column="10" selection-end-line="180" selection-end-column="10" />
               <folding>
+=======
+            <state relative-caret-position="266">
+              <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+              <folding>
+                <element signature="e#1255#1521#0" />
+                <element signature="n#!!doc;n#_checkData#0" />
+                <element signature="n#!!doc;n#connectMongo#0" />
+                <element signature="n#!!block;n#connectMongo#0" />
+                <element signature="e#2158#2173#0" />
+                <element signature="e#5834#5855#0" />
+                <element signature="n#!!block;n#f#0" />
+                <element signature="n#!!doc;n#_choiceData#0" />
+                <element signature="n#!!block;n#_choiceData#0" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
                 <element signature="n#!!doc;n#_getData#0" />
+                <element signature="n#!!block;n#_getData#0" />
                 <element signature="n#!!doc;n#_ergloop#0" />
+<<<<<<< HEAD
+=======
+                <element signature="e#9170#9420#0" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
               </folding>
             </state>
           </provider>
@@ -105,7 +206,6 @@
         <option value="$PROJECT_DIR$/view/css/index.css" />
         <option value="$PROJECT_DIR$/view/hearder.html" />
         <option value="$PROJECT_DIR$/view/css/init.css" />
-        <option value="$PROJECT_DIR$/view/logout.html" />
         <option value="$PROJECT_DIR$/view/css/head.css" />
         <option value="$PROJECT_DIR$/view/js/init.js" />
         <option value="$PROJECT_DIR$/view/newviews/index.html" />
@@ -123,12 +223,25 @@
         <option value="$PROJECT_DIR$/demo.js" />
         <option value="$PROJECT_DIR$/view/js/ajax.js" />
         <option value="$PROJECT_DIR$/view/js/base.js" />
+        <option value="$PROJECT_DIR$/view/css/article.css" />
+        <option value="$PROJECT_DIR$/view/js/index.js" />
+        <option value="$PROJECT_DIR$/view/css/nav.css" />
+        <option value="$PROJECT_DIR$/view/logout.html" />
+        <option value="$PROJECT_DIR$/view/js/register.js" />
         <option value="$PROJECT_DIR$/view/index.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/until/until.js" />
         <option value="$PROJECT_DIR$/view/css/article.css" />
         <option value="$PROJECT_DIR$/view/js/index.js" />
         <option value="$PROJECT_DIR$/newapp.js" />
         <option value="$PROJECT_DIR$/view/css/nav.css" />
+=======
+        <option value="$PROJECT_DIR$/view/register.html" />
+        <option value="$PROJECT_DIR$/view/login.html" />
+        <option value="$PROJECT_DIR$/view/js/login.js" />
+        <option value="$PROJECT_DIR$/newapp.js" />
+        <option value="$PROJECT_DIR$/until/until.js" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
       </list>
     </option>
   </component>
@@ -146,9 +259,15 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="4" />
     <option name="y" value="39" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -188,6 +307,11 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="newBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -199,7 +323,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="head-login-status&#9;null&#9;null&#10;login&#9;null&#9;null&#10;con-art-item&#9;null&#9;null&#10;item-icon&#9;null&#9;null&#10;item-user&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myblog/nodejs-blog" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
@@ -209,17 +337,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\TanZhou\Task\newBlog\view\images" />
-      <recent name="G:\TanZhou\Task\newBlog\view" />
-      <recent name="G:\TanZhou\Task\newBlog\view\newnode\newviews\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\web_learning\newBlog" />
       <recent name="G:\TanZhou\Task\newBlog\view" />
       <recent name="G:\TanZhou\Task\newBlog" />
       <recent name="G:\TanZhou\Task\newBlog\view\newnode\newviews\js" />
       <recent name="G:\TanZhou\Task\newBlog\view\newnode" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\web_learning\newBlog\view" />
+      <recent name="G:\TanZhou\Task\newBlog\view\images" />
+      <recent name="G:\TanZhou\Task\newBlog\view" />
+      <recent name="G:\TanZhou\Task\newBlog\view\newnode\newviews\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -255,14 +384,22 @@
       <workItem from="1540465660312" duration="9723000" />
       <workItem from="1540552023523" duration="9546000" />
       <workItem from="1540615949194" duration="15064000" />
+<<<<<<< HEAD
       <workItem from="1540695077513" duration="2797000" />
       <workItem from="1540705048645" duration="2596000" />
       <workItem from="1540823833095" duration="599000" />
+=======
+      <workItem from="1540811322163" duration="9819000" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="76766000" />
+=======
+    <option name="totallyTimeSpent" value="80593000" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,7 +420,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49925596" visible="true" weight="0.51601833" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49925596" weight="0.5123967" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
@@ -310,15 +451,17 @@
           <line>24</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/until/until.js</url>
-          <line>53</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/newapp.js</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -341,6 +484,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
     <entry file="file://$PROJECT_DIR$/newapp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
@@ -353,8 +498,25 @@
         <state relative-caret-position="1444">
           <caret line="76" column="29" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="29" />
           <folding>
+<<<<<<< HEAD
+=======
+            <element signature="e#1255#1521#0" />
+            <element signature="n#!!doc;n#_checkData#0" />
+            <element signature="n#!!doc;n#connectMongo#0" />
+            <element signature="n#!!block;n#connectMongo#0" />
+            <element signature="e#2158#2173#0" />
+            <element signature="e#5834#5855#0" />
+            <element signature="n#!!block;n#f#0" />
+            <element signature="n#!!doc;n#_choiceData#0" />
+            <element signature="n#!!block;n#_choiceData#0" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
             <element signature="n#!!doc;n#_getData#0" />
+            <element signature="n#!!block;n#_getData#0" />
             <element signature="n#!!doc;n#_ergloop#0" />
+<<<<<<< HEAD
+=======
+            <element signature="e#9170#9420#0" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
           </folding>
         </state>
       </provider>
@@ -479,7 +641,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/index.html" />
-    <entry file="file://$PROJECT_DIR$/view/logout.html" />
+    <entry file="file://$PROJECT_DIR$/view/register.html" />
     <entry file="file://$PROJECT_DIR$/view/css/head.css" />
     <entry file="file://$PROJECT_DIR$/view/css/init.css" />
     <entry file="file://$PROJECT_DIR$/view/index.html" />
@@ -488,7 +650,6 @@
     <entry file="file://$PROJECT_DIR$/view/css/head.css" />
     <entry file="file://$PROJECT_DIR$/view/js/init.js" />
     <entry file="file://$PROJECT_DIR$/view/css/init.css" />
-    <entry file="file://$PROJECT_DIR$/view/logout.html" />
     <entry file="file://$PROJECT_DIR$/view/index.html" />
     <entry file="file://E:/web/Task/js基础/task/45 jsonp ajax/天气预报/天气预报.html" />
     <entry file="file://$PROJECT_DIR$/routers/routers.js">
@@ -540,20 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/js/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -561,17 +708,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/until/until.js">
+    <entry file="file://$PROJECT_DIR$/view/css/nav.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/css/article.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/node_modules/mongodb/lib/utils.js">
+=======
+    <entry file="file://$PROJECT_DIR$/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="111" column="42" lean-forward="true" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#section#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#section#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/ajax.js">
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="3150">
           <caret line="180" column="10" selection-start-line="180" selection-start-column="10" selection-end-line="180" selection-end-column="10" />
           <folding>
             <element signature="n#!!doc;n#_getData#0" />
             <element signature="n#!!doc;n#_ergloop#0" />
+=======
+        <state relative-caret-position="156">
+          <caret line="36" column="109" selection-start-line="36" selection-start-column="109" selection-end-line="36" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="37" column="129" selection-start-line="37" selection-start-column="129" selection-end-line="37" selection-end-column="129" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/log" />
     <entry file="file://$PROJECT_DIR$/newapp.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -590,20 +799,36 @@
           <folding>
             <element signature="n#!!doc;n#createArtEle#0" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/view/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="31" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/article.css">
+    <entry file="file://$PROJECT_DIR$/view/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1458">
           <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+=======
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="450">
           <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+=======
+        <state relative-caret-position="209">
+          <caret line="11" column="5" selection-start-line="9" selection-start-column="10" selection-end-line="11" selection-end-column="5" />
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
           <folding>
             <element signature="n#ul#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#ul#0;n#section#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" />
@@ -612,10 +837,46 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/view/css/nav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+=======
+    <entry file="file://$PROJECT_DIR$/newapp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+          <folding>
+            <element signature="e#321#2225#0" />
+            <element signature="e#2350#2724#0" />
+            <element signature="e#2359#2493#0" />
+            <element signature="e#2369#2392#0" />
+            <element signature="e#2532#2650#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/until/until.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+          <folding>
+            <element signature="e#1255#1521#0" />
+            <element signature="n#!!doc;n#_checkData#0" />
+            <element signature="n#!!doc;n#connectMongo#0" />
+            <element signature="n#!!block;n#connectMongo#0" />
+            <element signature="e#2158#2173#0" />
+            <element signature="e#5834#5855#0" />
+            <element signature="n#!!block;n#f#0" />
+            <element signature="n#!!doc;n#_choiceData#0" />
+            <element signature="n#!!block;n#_choiceData#0" />
+            <element signature="n#!!doc;n#_getData#0" />
+            <element signature="n#!!block;n#_getData#0" />
+            <element signature="n#!!doc;n#_ergloop#0" />
+            <element signature="e#9170#9420#0" />
+          </folding>
+>>>>>>> a750d07263a985e7af65edb1f579e65f5d5f221c
         </state>
       </provider>
     </entry>

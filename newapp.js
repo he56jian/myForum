@@ -8,7 +8,7 @@ const querystring = require('querystring')      //用于解析post请求的数�
 http.createServer((req, res) => {
     let _pathname = __dirname;		//获取当前目录
     if (req.method === 'GET') {
-        if (!url.query) {
+        if (!url.query) {               //如果发送的get请求为空；
             let para = '';
             let _reqUrl = req.url;
             if (_reqUrl) {			//如果有请求地址的时候
@@ -65,6 +65,21 @@ http.createServer((req, res) => {
             req.on('end',function () {
                 _data = querystring.parse(_data);
             untils.getMongoData(_data,responseData);
+            })
+        }else if(req.url === '/view/login.html'){
+            let _reqData = '';
+            req.on('data',function (data) {
+                _reqData +=data;
+            })
+            req.on('end',function () {
+                _reqData = querystring.parse(_reqData);
+                let _name = _reqData.name,
+                    _val = _reqData.val;
+                console.log('发送了数据')
+                if(_name === 'password'){
+                    _reqData._val =  untils.setCrypro(_val)
+                }
+                untils.comparison(_reqData);
             })
         }
     }
