@@ -50,10 +50,6 @@ function createArtEle(data) {
         '</section>',
         '</li>'
     ]
-    // _artType = data.type,
-    // _artTitle = data.title,
-    // _artCreatTime = data.created,
-    // _artCommentNum = data.commentNum;
     _artItemsList.innerHTML += eleItem.join('');
 }
 

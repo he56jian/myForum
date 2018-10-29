@@ -52,6 +52,8 @@ http.createServer((req, res) => {
                 res.write(data);
                 res.end()
             })
+        }else{
+             console.log(url.query);
         }
     } else if (req.method === 'POST') {
         if (req.url =='/') {
