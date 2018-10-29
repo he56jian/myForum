@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d316487-6051-4a67-be3b-9e7bdbbda733" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.turtle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0-4438955534255968611.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/collection-0-4438955534255968611.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-22T17-48-27Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-23T14-21-39Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-24T11-00-54Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-24T11-09-19Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-25T11-12-18Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-26T11-05-08Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-26T11-06-25Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-10-27T04-53-17Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1-4438955534255968611.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/index-1-4438955534255968611.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000042" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newapp.js" beforeDir="false" afterPath="$PROJECT_DIR$/newapp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/出现的问题.md" beforeDir="false" afterPath="$PROJECT_DIR$/出现的问题.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +19,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="450">
               <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding>
                 <element signature="n#ul#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -52,7 +33,7 @@
       <file leaf-file-name="article.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/css/article.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="1458">
               <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
             </state>
           </provider>
@@ -70,7 +51,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
+            <state relative-caret-position="864">
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc;n#createArtEle#0" />
@@ -82,7 +63,7 @@
       <file leaf-file-name="newapp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newapp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="504">
               <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding>
                 <element signature="e#955#2034#0" />
@@ -178,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,6 +192,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,11 +257,12 @@
       <workItem from="1540615949194" duration="15064000" />
       <workItem from="1540695077513" duration="2797000" />
       <workItem from="1540705048645" duration="2596000" />
+      <workItem from="1540823833095" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76167000" />
+    <option name="totallyTimeSpent" value="76766000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,16 +572,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="89" column="100" lean-forward="true" selection-start-line="89" selection-start-column="100" selection-end-line="89" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/log" />
     <entry file="file://$PROJECT_DIR$/newapp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="504">
           <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
           <folding>
             <element signature="e#955#2034#0" />
@@ -609,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
+        <state relative-caret-position="864">
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc;n#createArtEle#0" />
@@ -619,14 +595,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/css/article.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="1458">
           <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="450">
           <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
             <element signature="n#ul#2;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
