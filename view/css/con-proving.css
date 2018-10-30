@@ -105,3 +105,6 @@
     text-indent: 2em    ;
 }
 
+input.fail{
+    border-color:red;
+}

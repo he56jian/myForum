@@ -22,3 +22,7 @@ body{
 .ver-mid {
     vertical-align: middle;
 }
+
+.unative{
+    display: none;
+}
