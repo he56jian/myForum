@@ -3,30 +3,34 @@ const _headLogin = document.getElementsByClassName('head-login')[0],
     _artItemsList = document.getElementsByClassName('con-art-items')[0];		//获取文章列表；
 const url = window.location.href;
 
-var _userName = '作者', _artType = '类型', _artTitle = '标题', _artCreatTime = '创作时间', _artCommentNum = 0,_userImg;
+var _userName = '作者', _artType = '类型', _artTitle = '标题', _artCreatTime = '创作时间', _artCommentNum = 0, _userImg;
 ajax({
     type: 'POST',
     url: url,
     data: {
-        articals:["tips","title","commentNum","auther","created"],
+        articals: ["tips", "title", "commentNum", "auther", "created"],
     },
     success: function (data) {
-        init(data.articals);
+        if (!data.undefined) {
+            init(data.articals);
+        }
     }
 })
+
 function init(data) {
     let _len = data.length;
     for (let i = 0; i < _len; i++) {
         createArtEle(data[i])
     }
 }
+
 /**
  * 添加文章列表
  * @param data 添加的数据
  */
 function createArtEle(data) {
     _userName = data.auther.username,
-    _userImg = data.auther.avatar,
+        _userImg = data.auther.avatar,
         _artCommentNum = data.commentNum,
         _artTitle = data.title,
         _artType = data.tips,
@@ -35,7 +39,7 @@ function createArtEle(data) {
 
     var eleItem = ['<li class="con-art-item fix">',
         '<section class="item-icon">',
-        '<img src=\"',_userImg,'\" alt="icon" width="40px" height="40px">',
+        '<img src=\"', _userImg, '\" alt="icon" width="40px" height="40px">',
         '<p class="item-user">',
         _userName,
         '</p>',
