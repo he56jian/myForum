@@ -2,13 +2,38 @@ const path = require('path')
 const fs = require('fs')
 const url = require('url')
 const http = require('http')
+const https = require('https')
 const untils = require('./until/until')
 const querystring = require('querystring')      //用于解析post请求的数据；
 let _status = true;     //用于阻隔连续点击两次的情况
-let _canReg = false;
 http.createServer((req, res) => {
     let _pathname = __dirname;		//获取当前目录
     if (req.method === 'GET') {
+        showHtml();
+    } else if (req.method === 'POST') {
+        if (req.url == '/') {
+            console.log('根目录')
+            _reqOnData(function (_data) {					//处理请求到的数据
+                untils.getMongoData(_data, responseData);
+            })
+        } else if (req.url === '/view/register.html') {
+            if (_status) {
+                _status = false;
+                _reqOnData(function (_reqData) {		//处理请求到的数据
+                    if (_reqData.action === 'test') {
+                        textData(_reqData);     //判断是否能注册,并产生回执
+                    } else if (_reqData.action === 'reg') {
+                        addUser(_reqData);
+                    }
+                });
+                _status = true;
+            }
+        }
+    } else if (req.url === '/view/login.html') {
+
+    }
+
+    function showHtml() {
         let _reqUrl = req.url;
         if (_reqUrl) {               //如果发送的get请求为空；
             let para = '';
@@ -54,35 +79,16 @@ http.createServer((req, res) => {
                 res.end()
             })
         } else {
-            console.log('123123');
+            console.log('链接失败');
         }
-    } else if (req.method === 'POST') {
-        if (req.url == '/') {
-            console.log('根目录')
-            _reqOnData(function (_data) {					//处理请求到的数据
-                untils.getMongoData(_data, responseData);
-            })
-        } else if (req.url === '/view/register.html') {
-            if (_status) {
-                _status = false;
-                _reqOnData(function (_reqData) {		//处理请求到的数据
-                    console.log(_reqData)
-                    if (_reqData.action === 'test') {
-                        textData(_reqData);     //判断是否能注册,并产生回执
-                    }else if(_reqData.action ===  'reg') {
-                        let _passVal = _reqData.password;
-                        let _nameVal = _reqData.username;
-                        let newPass = untils.setCrypro(_passVal);
-                        let _addData = {username:_nameVal,password:newPass};
+    }
 
-                        untils.addUser(_addData);
-                    }
-                });
-                _status = true;
-            }
-        }
-    } else if (req.url === '/view/login.html') {
-
+    function addUser(_reqData) {
+        let _passVal = _reqData.password;
+        let _nameVal = _reqData.username;
+        let newPass = untils.setCrypro(_passVal);
+        let _addData = {username: _nameVal, password: newPass};
+        untils.addUser(_addData);
     }
 
     /**
@@ -127,9 +133,14 @@ http.createServer((req, res) => {
      * @param data
      */
     function responseData(data) {       //返回数据
-        res.write(data);
+        data && res.write(data);
         res.end();
     }
 
 }).listen(1204);
 
+function reqURL(url) {
+    http.get('http://localhost:1204'+url,(res)=>{
+        console.log( '请求成功')
+    })
+}

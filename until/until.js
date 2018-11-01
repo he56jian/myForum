@@ -91,14 +91,11 @@ function _checkData(_reqData) {
     return state;
 }
 
-myUntils.addUser = function (user) {
-    let useKey = Object.keys(user);
+myUntils.addUser = function (adduser,callback) {
     _docData = ['users'];
-    connectMongo('add', function (data, _doc) {
-        _ergloop(useKey, function (_data) {
-            console.log(useKey[_data], data, _doc)
-        })
-    }, user)
+    connectMongo('add', function (data) {
+        callback && callback.call(null,'/view/regSuccess.html');
+    }, adduser);
 }
 
 /**
@@ -111,26 +108,24 @@ function getMongoObj(callback, action, addData) {
     MongoClient.connect(mongoUrl, function (err, db) {				//连接数据库
         let dbo = db.db('user');
         for (let _doc = 0; _doc < _docLen; _doc++) {
-            if(action === 'find'){
+            if (action === 'find') {
                 dbo.collection(_docData[_doc], {useNewUrlParser: true})
                     .find({}).toArray(function (err, data) {
                     callback && callback.call(null, data, _doc)
                 });
-            }else if(action === 'add'){
-                console.log(_docData[_doc])
-                dbo.collection(_docData[_doc],{safe:true}).insert(addData,{safe:true},function (err,result) {
-                    //     console.log(result);
-                })
+            } else if (action === 'add') {
+                dbo.collection(_docData[_doc], {useNewUrlParser: true}).insert(addData, null, function (err,data) {
+                    callback && callback.call(null,'注册成功')
+                });
             }
         }
     });
-
 }
 
 /**
  * 链接数据库；
  */
-function connectMongo(action, callback) {
+function connectMongo(action, callback, user) {
     //创建可操作的user对象；
     // dbo.collection(_docData[0], {useNewUrlParser: true}).find({}).toArray(function (err, data) {
     //     let artKeyArr = Object.keys(data[0]);
@@ -177,7 +172,7 @@ function connectMongo(action, callback) {
     _mongoData = '';
     getMongoObj(function (data, _doc) {
         callback && callback.call(null, data, _doc);
-    }, action);
+    }, action,user);
 }
 
 function getData(data, mongoName) {                                             //如果data 是一个json对象，
@@ -220,7 +215,6 @@ function _choiceData(choice, data) {
     let redDataItem = [];
     if (choice) {
         _ergloop(choice, function (key) {
-            // console.log(key)
             const _dataKey = _ergloop(_data);
             let _dataIndex = _dataKey.indexOf(key);
             // console.log(_dataKey[_dataIndex] )          //获取文档名；

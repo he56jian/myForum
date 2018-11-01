@@ -52,19 +52,26 @@ window.onload = function () {
        let _pName =  inpP.name;
        let _pVal =  inpP.value;
         //只有确认密码正确后才能执行
-            console.log(passStatus,userStatus)
         if (passStatus && userStatus) {
             ajax({
                 type:'POST',
                 url:url,
                 data:{action:'reg',[_uName]:_uVal,[_pName]:_pVal},
                 success:function (data) {
-                    console.log(data)
+                    toSuccess();
                 }
             })
         }
     }
 
+    
+    function toSuccess() {
+        console.log('发起成功请求')
+        ajax({
+            type:'GET',
+            url:'http://localhost:1204/view/regSuccess.html'
+        })
+    }
     function addTips() {
         let _val = this.value;
         let _key = this.name;
