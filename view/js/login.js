@@ -58,12 +58,25 @@ window.onload = function () {
                 url:url,
                 data:{action:'reg',[_uName]:_uVal,[_pName]:_pVal},
                 success:function (data) {
+<<<<<<< HEAD
 					 window.location.href = '/view/'
 				}
+=======
+                    toSuccess();
+                }
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
             })
         }
     }
 
+    
+    function toSuccess() {
+        console.log('发起成功请求')
+        ajax({
+            type:'GET',
+            url:'http://localhost:1204/view/regSuccess.html'
+        })
+    }
     function addTips() {
         let _val = this.value;
         let _key = this.name;

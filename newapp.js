@@ -12,6 +12,10 @@ http.createServer((req, res) => {
         showHtml();
     } else if (req.method === 'POST') {
         if (req.url == '/') {
+<<<<<<< HEAD
+=======
+            console.log('根目录')
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
             _reqOnData(function (_data) {					//处理请求到的数据
                 untils.getMongoData(_data, responseData);
             })
@@ -22,7 +26,11 @@ http.createServer((req, res) => {
                     if (_reqData.action === 'test') {
                         textData(_reqData);     //判断是否能注册,并产生回执
                     } else if (_reqData.action === 'reg') {
+<<<<<<< HEAD
                         addUser(_reqData, responseData);
+=======
+                        addUser(_reqData);
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
                     }
                 });
                 _status = true;
@@ -79,12 +87,20 @@ http.createServer((req, res) => {
         }
     }
 
+<<<<<<< HEAD
     function addUser(_reqData,callback) {
+=======
+    function addUser(_reqData) {
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
         let _passVal = _reqData.password;
         let _nameVal = _reqData.username;
         let newPass = untils.setCrypro(_passVal);
         let _addData = {username: _nameVal, password: newPass};
+<<<<<<< HEAD
         untils.addUser(_addData, callback);
+=======
+        untils.addUser(_addData);
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
     }
 
     /**
@@ -134,7 +150,12 @@ http.createServer((req, res) => {
 }).listen(1204);
 
 function reqURL(url) {
+<<<<<<< HEAD
     http.get('http://localhost:1204' + url, (res) => {
         console.log('请求成功')
+=======
+    http.get('http://localhost:1204'+url,(res)=>{
+        console.log( '请求成功')
+>>>>>>> 04d73a123b774b8a3f72b3095fc9409bfc75b43e
     })
 }
